@@ -2,7 +2,7 @@
 
 title: Exllama
 summary: This is some summary.
-# date: 2024-06-12
+date: 2024-06-15
 showData: false
 # authors:
 #   - admin

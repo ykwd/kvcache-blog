@@ -39,18 +39,6 @@ sections:
           filters:
             brightness: 0.5
 
-
-  - block: collection
-    id: blogs
-    content:
-      title: ''
-      filters:
-        folders: 
-          - blog
-    design:
-      view: article-grid
-
-
   - block: collection
     id: githubs
     content:
@@ -59,7 +47,21 @@ sections:
         folders: 
           - repo
     design:
+      view: card
+
+  - block: collection
+    id: blogs
+    content:
+      title: ''
+      count: 6
+      filters:
+        folders: 
+          - blog
+    design:
       view: article-grid
+
+
+  
 
   # - block: features
   #   id: features

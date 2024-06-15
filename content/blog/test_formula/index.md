@@ -7,6 +7,9 @@ authors:
 tags:
   - Formular
 
+
+commentable: true
+
 image:
   caption: 'Image credit: [**Unsplash**](https://unsplash.com)'
 ---

@@ -78,7 +78,10 @@ features:
   comment:
     provider: ''
     giscus:
-      repo: ''
-      repo_id: ''
-      category: ''
-      category_id: ''
+      repo: 'BITcyman/blog-comment'
+      repo_id: 'R_kgDOMJyGXw'
+      category: 'Announcements'
+      category_id: 'DIC_kwDOMJyGX84CgG12'
+      theme: preferred_color_scheme
+      language_code: en
+      mapping: pathname
