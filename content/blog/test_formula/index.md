@@ -10,6 +10,8 @@ tags:
 
 commentable: true
 
+showathome: true
+
 image:
   caption: 'Image credit: [**Unsplash**](https://unsplash.com)'
 ---

@@ -13,13 +13,13 @@ sections:
       title: KVCache.ai
       text: "A collaborative endeavor with leading industry partners such as Approaching.AI and Moonshot AI. The project focuses on developing effective and practical techniques that enrich both academic research and open-source development."
       icon: icon.png
-      primary_action:
-        text: Get Started
-        url: https://github.com/kvcache-ai
-        icon: rocket-launch
-      secondary_action:
-        text: Read the docs
-        url: /docs/
+      # primary_action:
+      #   text: Get Started
+      #   url: https://github.com/kvcache-ai
+      #   icon: rocket-launch
+      # secondary_action:
+      #   text: Read the docs
+      #   url: /docs/
       announcement:
         text: "The project's newest blog! "
         link:
@@ -39,26 +39,38 @@ sections:
           filters:
             brightness: 0.5
 
-  - block: collection
-    id: githubs
-    content:
-      title: Github repo
-      filters:
-        folders: 
-          - repo
-    design:
-      view: card
-
-  - block: collection
-    id: blogs
+  - block: top-blog
+    id: top post
     content:
       title: ''
-      count: 6
+      sort_by: 'home_weight'
       filters:
         folders: 
           - blog
+          - repo
     design:
-      view: article-grid
+      view: top-blog-view
+
+  # - block: collection
+  #   id: githubs
+  #   content:
+  #     title: Github repo
+  #     filters:
+  #       folders: 
+  #         - repo
+  #   design:
+  #     view: card
+
+  # - block: collection
+  #   id: blogs
+  #   content:
+  #     title: ''
+  #     count: 6
+  #     filters:
+  #       folders: 
+  #         - blog
+  #   design:
+  #     view: article-grid
 
 
   

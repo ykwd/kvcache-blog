@@ -7,6 +7,9 @@ authors:
 tags:
   - some tags 
 
+showathome: false
+
+
 image:
   caption: 'Image credit: [**Unsplash**](https://unsplash.com)'
 ---

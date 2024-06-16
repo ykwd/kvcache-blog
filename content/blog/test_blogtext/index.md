@@ -1,6 +1,10 @@
 ---
 title: Introducing Hard Prompts Category in Chatbot Arena
-summary: This is a blogtext test
+summary: "
+  Hugo v2.0.0 released. Download now and follow the guide to get started in 5 minutes!
+  Hugo v2.0.0 released. Download now and follow the guide to get started in 5 minutes!
+  Hugo v2.0.0 released. Download now and follow the guide to get started in 5 minutes!
+  "
 date: 2024-06-12
 authors:
   - admin
@@ -8,6 +12,8 @@ tags:
   - Formular
 
 commentable: true
+
+showathome: true
 
 image:
   caption: 'Image credit: [**Unsplash**](https://unsplash.com)'

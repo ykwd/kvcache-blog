@@ -9,6 +9,9 @@ showData: false
 tags:
   - tag
 
+home_weight: 10
+showathome: true
+
 external_link: https://github.com/kvcache-ai/Lexllama
 
 ---

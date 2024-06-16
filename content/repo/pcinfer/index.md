@@ -8,6 +8,9 @@ authors:
 tags:
   - tag
 
+home_weight: 15
+showathome: true
+
 external_link: https://github.com/kvcache-ai/pcinfer
 
 ---

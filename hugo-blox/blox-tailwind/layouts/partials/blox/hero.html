@@ -18,49 +18,52 @@
     </div>
     {{end}} -->
     
-    <div class="flex justify-center">
-      {{ $image := resources.Get "media/icon.png" }}
-      <img src="{{ $image.Permalink }}" alt="KVCache.ai" class="mb-8">
-    </div>
-
-
-
-    <div class="text-center">
-      {{ with $block.content.title }}<h1 class="text-4xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-6xl">{{ . | markdownify }}</h1>{{end}}
-      {{ with $block.content.text }}<p class="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">{{ . | $page.RenderString | emojify }}</p>{{end}}
-
-      {{ if $block.content.primary_action.url }}
-        {{ $link := $block.content.primary_action.url }}
-        {{ $scheme := (urls.Parse $link).Scheme }}
-        {{ $target := "" }}
-        {{ if not $scheme }}
-          {{ $link = $link | relLangURL }}
-        {{ else if in (slice "http" "https") $scheme }}
-          {{ $target = "target=\"_blank\" rel=\"noopener\"" }}
-        {{ end }}
-      <div class="mt-10 flex items-center justify-center gap-x-6">
-        <a href="{{ $link | safeURL }}" {{ $target | safeHTMLAttr }} class="rounded-md bg-primary-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-primary-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600">
-          {{ $block.content.primary_action.text | markdownify | emojify }}
-          {{ with $block.content.primary_action.icon }}
-            {{ partial "functions/get_icon" (dict "name" . "attributes" "style=\"height: 1em\" class='inline-block pl-2'") }}
-          {{ end }}
-        </a>
-        {{end}}
-
-        {{ if $block.content.secondary_action.url }}
-          {{ $link_alt := $block.content.secondary_action.url }}
-          {{ $scheme_alt := (urls.Parse $link_alt).Scheme }}
-          {{ $target_alt := "" }}
-          {{ if not $scheme_alt }}
-            {{ $link_alt = $link_alt | relLangURL }}
-          {{ else if in (slice "http" "https") $scheme_alt }}
-            {{ $target_alt = "target=\"_blank\" rel=\"noopener\"" }}
-          {{ end }}
-        <a href="{{ $link_alt | safeURL }}" {{ $target_alt | safeHTMLAttr }} class="text-sm font-semibold leading-6 text-gray-900 dark:text-gray-100 hover:dark:text-gray-200 hover:text-gray-800">{{ $block.content.secondary_action.text | markdownify | emojify }} <span aria-hidden="true">→</span></a>
-      {{end}}
-
+    <div class="flex flex-col md:flex-row justify-between items-stretch">
+      <!-- img -->
+      <div class="md:w-1/4 flex items-center" style="min-height: 160px;"> <!-- 添加内联样式以确保有最小高度 -->
+        {{ $image := resources.Get "media/icon.png" }}
+        <!-- 确保图像在所有屏幕上都是全宽，且在大屏幕上有最小高度 -->
+        <img src="{{ $image.Permalink }}" alt="KVCache.ai" class="w-full h-auto md:min-h-[160px]">
       </div>
 
+
+
+      <div class="md:w-3/4 flex flex-col justify-center text-center mt-4 md:mt-0">
+        {{ with $block.content.title }}<h1 class="text-2xl md:text-4xl font-bold tracking-tight text-gray-900 dark:text-gray-100">{{ . | markdownify }}</h1>{{end}}
+        {{ with $block.content.text }}<p class="text-base md:text-lg leading-8 text-gray-600 dark:text-gray-300">{{ . | $page.RenderString | emojify }}</p>{{end}}
+
+        {{ if $block.content.primary_action.url }}
+          {{ $link := $block.content.primary_action.url }}
+          {{ $scheme := (urls.Parse $link).Scheme }}
+          {{ $target := "" }}
+          {{ if not $scheme }}
+            {{ $link = $link | relLangURL }}
+          {{ else if in (slice "http" "https") $scheme }}
+            {{ $target = "target=\"_blank\" rel=\"noopener\"" }}
+          {{ end }}
+        <div class="mt-10 flex items-center justify-center gap-x-6">
+          <a href="{{ $link | safeURL }}" {{ $target | safeHTMLAttr }} class="rounded-md bg-primary-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-primary-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600">
+            {{ $block.content.primary_action.text | markdownify | emojify }}
+            {{ with $block.content.primary_action.icon }}
+              {{ partial "functions/get_icon" (dict "name" . "attributes" "style=\"height: 1em\" class='inline-block pl-2'") }}
+            {{ end }}
+          </a>
+          {{end}}
+
+          {{ if $block.content.secondary_action.url }}
+            {{ $link_alt := $block.content.secondary_action.url }}
+            {{ $scheme_alt := (urls.Parse $link_alt).Scheme }}
+            {{ $target_alt := "" }}
+            {{ if not $scheme_alt }}
+              {{ $link_alt = $link_alt | relLangURL }}
+            {{ else if in (slice "http" "https") $scheme_alt }}
+              {{ $target_alt = "target=\"_blank\" rel=\"noopener\"" }}
+            {{ end }}
+          <a href="{{ $link_alt | safeURL }}" {{ $target_alt | safeHTMLAttr }} class="text-sm font-semibold leading-6 text-gray-900 dark:text-gray-100 hover:dark:text-gray-200 hover:text-gray-800">{{ $block.content.secondary_action.text | markdownify | emojify }} <span aria-hidden="true">→</span></a>
+        {{end}}
+
+        </div>
+      </div>
     </div>
   </div>
 

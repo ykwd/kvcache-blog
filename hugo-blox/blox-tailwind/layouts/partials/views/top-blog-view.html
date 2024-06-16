@@ -4,7 +4,6 @@
 {{ $anchor := $item.Params.image.focal_point | default "Center" }}
 
 <div class="group cursor-pointer">
-
   {{ with $resource }}
   {{ $image := .Fill (printf "655x655 %s" $anchor) }}
   {{ if ne $image.MediaType.SubType "gif" }}{{ $image = $image.Process "webp" }}{{ end }}
