@@ -44,7 +44,7 @@ header:
       text: "Go back to Madsys"
       url: "http://121.36.5.112:1313/"
     show_search: true
-    show_theme_chooser: true
+    show_theme_chooser: false
 
 # Site footer
 footer:
