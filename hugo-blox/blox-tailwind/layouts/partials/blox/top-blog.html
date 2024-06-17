@@ -171,7 +171,13 @@
                        {{- $item.Title -}}
                       </span></a>
                 </h2>
-              <p class="mt-2 line-clamp-3 text-sm">by: Shaoyuan Chen, Mingxing Zhang, May 20, 2024</p>
+              
+              <p class="mt-2 line-clamp-3 text-sm">by: 
+                {{ range $item.Params.authors }}
+                  {{ . }},
+                {{ end }}  
+                {{ $item.Params.dateshown }}
+              </p>
               <hr class="mt-2" />
               <p class="mt-2 line-clamp-5 text-sm">
                 <a href="{{ $item.RelPermalink }}">

@@ -3,7 +3,8 @@ title: DeepSeek-V2 高性能推理 (1)：通过矩阵吸收十倍提速 MLA 算�
 summary: "
   从系统的角度 MLA 是一个非常优秀的、能够充分利用显卡算力的设计。然而可惜的是可能是为了兼容现有生态，现有的开源代码是将 MLA 展开成 MHA 进行的计算，虽然数学等价但既不省显存也不增加计算强度，性能堪忧。为了充分发挥 MLA 的优势，本文首先详细分析了现有的开源实现，并探索了一种简单易改的“矩阵吸收”技巧的实现方法。测试结果显示优化后的 DeepseekV2Attention 算子实现可以实现单算子十倍以上的提速。
   "
-date: 2024-06-15
+date: 2024-05-20
+dateshown: May 20,2024
 authors:
   - Shaoyuan Chen
   - ZHANG Mingxing
@@ -16,6 +17,7 @@ tags:
 commentable: true
 
 showathome: true
+home_weight: 15
 
 # image:
 #   caption: 'Image credit: [**Unsplash**](https://unsplash.com)'
@@ -149,8 +151,8 @@ kv_b_proj 大小为 [kv_lora_rank， num_heads * (q_head_dim - qk_rope_head_dim 
 比如对于 {{< math >}} $W^{UK}$ {{< /math >}} 矩阵我们有
 
 {{< math >}} 
-$$ atten \_ weights = q_t^\top  k_t = (W^{UQ}c_t^Q)^\top W^{UK} c_t^{KV} = {c_t^Q}^\top {W^{UQ}}^\top  W^{UK} c_t^{KV} 
-= ({c_t^Q}^\top {W^{UQ}}^\top  W^{UK}) c_t^{KV} $$ 
+$ atten \_ weights = q_t^\top  k_t = (W^{UQ}c_t^Q)^\top W^{UK} c_t^{KV} = {c_t^Q}^\top {W^{UQ}}^\top  W^{UK} c_t^{KV} 
+= ({c_t^Q}^\top {W^{UQ}}^\top  W^{UK}) c_t^{KV} $
 
 {{< /math >}}
 

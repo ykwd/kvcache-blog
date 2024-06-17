@@ -5,7 +5,8 @@ summary: "
   Hugo v2.0.0 released. Download now and follow the guide to get started in 5 minutes!
   Hugo v2.0.0 released. Download now and follow the guide to get started in 5 minutes!
   "
-date: 2024-06-12
+date: 2024-04-30
+dateshown: April 30,2024
 authors:
   - admin
 tags:
@@ -14,6 +15,7 @@ tags:
 commentable: true
 
 showathome: true
+home_weight: 13
 
 image:
   caption: 'Image credit: [**Unsplash**](https://unsplash.com)'

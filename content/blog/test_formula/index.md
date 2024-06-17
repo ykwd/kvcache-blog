@@ -1,9 +1,13 @@
 ---
 title: test shortcode
 summary: This is a shortcode test
-date: 2024-06-12
+date: 2024-05-01
+dateshown: May 1,2024
+
 authors:
   - admin
+
+
 tags:
   - Formular
 
@@ -11,6 +15,7 @@ tags:
 commentable: true
 
 showathome: true
+home_weight: 10
 
 image:
   caption: 'Image credit: [**Unsplash**](https://unsplash.com)'
