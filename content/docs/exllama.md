@@ -1,9 +1,8 @@
 ---
-title: exllama
+title: ExLlamaV2
 date: 2024-02-17
 weight: 2
 ---
-# ExLlamaV2
 
 ExLlamaV2 is an inference library for running local LLMs on modern consumer GPUs.
 
@@ -185,8 +184,8 @@ and mostly stable output with 2.55 bits per weight. 13B models run at 2.65 bits 
 none of them uses GQA which effectively limits the context size to 2048. In either case it's unlikely that the model
 will fit alongside a desktop environment. For now.
 
-[![chat_screenshot](../img/llama2_70b_chat_thumb.png)](./img/llama2_70b_chat.png)
-[![chat_screenshot](../img/codellama_13b_instruct_thumb.png)](./img/codellama_13b_instruct.png)
+![chat_screenshot](../img/llama2_70b_chat_thumb.png)
+![chat_screenshot](../img/codellama_13b_instruct_thumb.png)
 
 ### Conversion
 
