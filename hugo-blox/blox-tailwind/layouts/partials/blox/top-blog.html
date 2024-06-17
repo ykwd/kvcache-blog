@@ -142,6 +142,15 @@
                 href="{{ $item.RelPermalink }}">
                 {{ ($item.Params.summary | default $item.Summary) | plainify | htmlUnescape | chomp -}}
               </a></p>
+
+            <!-- get start button -->
+            <a href="{{ $item.Params.external_link }}" class="">
+                Get start 
+            </a>
+            |
+            <a href="{{ $item.Params.doc_link }}" class="">
+              Read the docs
+          </a>
         </div>
     {{ end }}
   </div>
@@ -160,7 +169,7 @@
             <p class="mt-2 line-clamp-3 text-sm text-gray-500 dark:text-gray-400"><a
                 href="{{ $item.RelPermalink }}">
                 {{ ($item.Params.summary | default $item.Summary) | plainify | htmlUnescape | chomp -}}
-              </a></p>
+              </a></p>     
         </div>
     {{ end }}
 

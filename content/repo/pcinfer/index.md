@@ -1,6 +1,6 @@
 ---
 title: pcinfer
-summary: This is some summary.
+summary: pcinfer is balabalaba
 # date: 2024-06-12
 showData: false
 authors:
@@ -12,5 +12,6 @@ home_weight: 15
 showathome: true
 
 external_link: https://github.com/kvcache-ai/pcinfer
+doc_link: /docs/pcinfer
 
 ---

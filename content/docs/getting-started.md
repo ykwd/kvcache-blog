@@ -2,6 +2,9 @@
 title: Getting Started
 date: 2024-02-17
 weight: 1
+
+draft: true
+
 ---
 
 ## Quick Start from Template
