@@ -18,6 +18,8 @@ tags:
   - Markdown
 image:
   caption: 'Image credit: [**Unsplash**](https://unsplash.com)'
+
+draft: true
 ---
 
 Hugo v2.0.0 is now available! This release includes new experimental features to try out, improvements to accessibility, the ability for plugins to customize image optimization in Markdown, and many more improvements and bug fixes.
