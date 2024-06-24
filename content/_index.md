@@ -12,7 +12,7 @@ sections:
     content:
       title: KVCache.ai
       text: "A collaborative endeavor with leading industry partners such as Approaching.AI and Moonshot AI. The project focuses on developing effective and practical techniques that enrich both academic research and open-source development."
-      icon: icon.png
+      icon: icon_1.png
       # primary_action:
       #   text: Get Started
       #   url: https://github.com/kvcache-ai

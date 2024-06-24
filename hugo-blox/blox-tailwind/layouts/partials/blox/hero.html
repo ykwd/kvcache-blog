@@ -21,8 +21,10 @@
     <div class="flex flex-col md:flex-row justify-between items-stretch">
       <!-- img -->
       <div class="md:w-1/4 flex items-center justify-center" style="min-height: 160px;"> <!-- 添加内联样式以确保有最小高度 -->
-        {{ $image_white := resources.Get "media/bg_logo_white.png" }}
-        {{ $image_black := resources.Get "media/bg_logo_black.png" }}
+        <!-- {{ $image_white := resources.Get "media/bg_logo_white.png" }} -->
+        <!-- {{ $image_black := resources.Get "media/bg_logo_black.png" }} -->
+        {{ $image_white := resources.Get "media/icon_1.png" }}
+        {{ $image_black := resources.Get "media/icon_1.png" }}
         <!-- 确保图像在所有屏幕上都是全宽，且在大屏幕上有最小高度 -->
         <div class="logo-box">
           <img src="{{ $image_black.Permalink }}" alt="KVCache.ai" class="w-full h-auto md:min-h-[160px] dark:img-hidden">
