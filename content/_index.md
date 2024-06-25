@@ -11,7 +11,7 @@ sections:
   - block: hero
     content:
       title: KVCache.ai
-      text: "A collaborative endeavor with leading industry partners such as Approaching.AI and Moonshot AI. The project focuses on developing effective and practical techniques that enrich both academic research and open-source development."
+      text: "Essentially, a decoder-only Transformer model transforms data from any modality into KVCache, positioning it as a central element in LLM serving optimizations. These optimizations include, but are not limited to, caching, scheduling, compression, and offloading. KVCache.AI is a collaborative endeavor with leading industry partners such as Approaching.AI and Moonshot AI. The project focuses on developing effective and practical techniques that enhance both academic research and open-source development."
       icon: icon_1.png
       # primary_action:
       #   text: Get Started
@@ -44,6 +44,7 @@ sections:
     content:
       title: ''
       sort_by: 'home_weight'
+      show_blog: false
       filters:
         folders: 
           - blog

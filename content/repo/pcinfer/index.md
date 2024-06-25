@@ -16,6 +16,9 @@ showathome: true
 external_link: https://github.com/kvcache-ai/pcinfer
 doc_link: /docs/pcinfer
 
+
+draft: true
+
 ---
 
 pcinfer is balabalaba, balabalababalabalaba, balabalababalabalababalabalaba, balabalababalabalababalabalababalabalaba

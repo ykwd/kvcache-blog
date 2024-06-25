@@ -1,6 +1,9 @@
 ---
 linkTitle: Documentation
 title: Introduction
+
+show_date_updated: false
+
 ---
 
 👋 Welcome to the documentation of kvcache projects!
