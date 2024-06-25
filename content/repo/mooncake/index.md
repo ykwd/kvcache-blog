@@ -1,7 +1,7 @@
 ---
 
 title: Mooncake
-summary:  "Mookcake! Delicious mookcake!"
+summary:  "Mooncake! Delicious mooncake!"
 
 date: 2024-06-25
 showData: false
