@@ -36,14 +36,14 @@ header:
     align: "center"
     fixed_to_top: true
     logo:
-      text: ""
+      text: "KVCache.ai"
       # Logo filename in `assets/media/` folder
-      filename: "icon.png"
+      filename: "icon_1.png"
     button:
       enable: true
-      text: "Go back to Madsys"
+      text: "Go back to MADSys"
       url: "https://madsys.cs.tsinghua.edu.cn/"
-    show_search: true
+    show_search: false
     show_theme_chooser: false
 
 # Site footer

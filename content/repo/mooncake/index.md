@@ -1,7 +1,7 @@
 ---
 
 title: Mooncake
-summary:  "Mooncake! Delicious mooncake!"
+summary:  "Mooncake, delicious mooncake made with Moonshot AI! A KVCache-centric disaggregated architecture for LLM serving."
 
 date: 2024-06-25
 showData: false
