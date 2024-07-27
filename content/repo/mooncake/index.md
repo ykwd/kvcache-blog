@@ -17,6 +17,3 @@ external_link: https://github.com/kvcache-ai/Mooncake
 
 
 ---
-
-
-
