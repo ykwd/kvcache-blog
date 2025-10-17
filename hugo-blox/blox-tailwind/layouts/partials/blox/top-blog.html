@@ -124,7 +124,7 @@
 </div>
 {{ end }}
 
-<div class="flex flex-col items-center" style="padding-bottom: 15rem;">
+<div class="flex flex-col items-center" style="padding-bottom: 1rem;">
   <div class="container px-8 mx-auto max-w-screen-xl xl:px-5 py-5 lg:py-8">
     <div class="grid md:grid-cols-2 top-blog-container">
 
@@ -135,7 +135,7 @@
         {{ range $index, $item := $query_repo }}
           <!-- if mooncake -->
           {{ if eq $item.Title "Mooncake"}}
-            {{ $image_moon := resources.Get "media/moonshot.png" }} 
+            {{ $image_moon := resources.Get (path.Join "media" "moonshot.png") }} 
             <div class="p-4 border top-item bg-black text-white hover:bg-white hover:text-black dark:bg-white dark:text-black dark:hover:bg-black dark:hover:text-white">
               <h2 class="text-lg font-semibold leading-snug tracking-tight mt-2">
                 <a href="{{ $item.Params.external_link }}">
@@ -147,7 +147,7 @@
               <!-- summary -->
               <hr class="mt-2" />
                 <p class="mt-2 line-clamp-5 text-sm">
-                  Mooncake, delicious mooncake made with <a href="https://www.moonshot.cn/" style=" text-decoration: underline;"><img src="{{ $image_moon.Permalink }}" alt="icon" style="height: 17px; vertical-align: baseline; display: inline-block;">Moonshot AI</a> ! 
+                  Mooncake, delicious mooncake made with <a href="https://www.moonshot.cn/" style=" text-decoration: underline;"><img src="{{ $image_moon.RelPermalink }}" alt="icon" style="height: 17px; vertical-align: baseline; display: inline-block;">Moonshot AI</a> ! 
                 </p>
                 <p class="mt-2 line-clamp-5 text-sm">
                   A KVCache-centric disaggregated architecture for LLM serving.
@@ -186,7 +186,7 @@
                 <p class="mt-2 line-clamp-5 text-sm">
                   A Flexible Framework for Experiencing Cutting-edge LLM Inference Optimizations. Made with  
                   <a href="https://approaching-ai.com/" style=" text-decoration: underline;">
-                      <img src="{{ $image_approaching.Permalink }}" alt="icon" style="height: 17px; vertical-align: baseline; display: inline-block;">Approaching AI</a> !
+                      <img src="{{ $image_approaching.RelPermalink }}" alt="icon" style="height: 17px; vertical-align: baseline; display: inline-block;">Approaching AI</a> !
                   
                 </p>
                 
@@ -211,7 +211,6 @@
             </div>
 
           {{ else if eq $item.Title "TrEnv-X"}}
-            {{ $image_approaching := resources.Get "media/Approaching-ai-square.png" }} 
             <div class="p-4 border top-item bg-black text-white hover:bg-white hover:text-black dark:bg-white dark:text-black dark:hover:bg-black dark:hover:text-white">
               <h2 class="text-lg font-semibold leading-snug tracking-tight mt-2">
                 <a href="{{ $item.Params.external_link }}">

@@ -27,8 +27,8 @@
         {{ $image_black := resources.Get "media/icon_1.png" }}
         <!-- 确保图像在所有屏幕上都是全宽，且在大屏幕上有最小高度 -->
         <div class="logo-box">
-          <img src="{{ $image_black.Permalink }}" alt="KVCache.ai" class="w-full h-auto md:min-h-[160px] dark:img-hidden">
-          <img src="{{ $image_white.Permalink }}" alt="KVCache.ai" class="w-full h-auto md:min-h-[160px] img-hidden dark:img-show">
+          <img src="{{ $image_black.RelPermalink }}" alt="KVCache.ai" class="w-full h-auto md:min-h-[160px] dark:img-hidden">
+          <img src="{{ $image_white.RelPermalink }}" alt="KVCache.ai" class="w-full h-auto md:min-h-[160px] img-hidden dark:img-show">
         </div>
       </div>
 

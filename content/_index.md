@@ -52,6 +52,10 @@ sections:
     design:
       view: top-blog-view
 
+  - block: snap
+    id: snap
+    
+
   # - block: collection
   #   id: githubs
   #   content:
