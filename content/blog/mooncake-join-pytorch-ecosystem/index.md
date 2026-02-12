@@ -39,6 +39,10 @@ Concretely, Mooncake enables:
 
 - **Fast weight updates**: Support rapid model and weight updates for RL, checkpointing, and iterative deployment workflows via tensor-native, zero-copy APIs.
 
-Today, Mooncake is already being wired into PyTorch-native serving workflows through integrations with engines such as **SGLang**, **vLLM**, and **TensorRT-LLM**. Looking ahead, we’re excited to collaborate even more closely across the ecosystem and to push the state of LLM serving toward a future that is more scalable, efficient, and production-ready.
+Mooncake began as a research collaboration between Moonshot AI and Tsinghua University, emerging from the need to overcome the "memory wall" when serving large-scale models such as Kimi. Since its open-source release, it has grown into a thriving community-driven project.
+
+Today, Mooncake is already being wired into PyTorch-native serving workflows through integrations with engines such as **SGLang**, **vLLM**, and **TensorRT-LLM**. Together, Mooncake and its integrations have led to wide adoption across leading organizations, including Moonshot AI (Kimi), Alibaba Cloud, Ant Group, JD.com, Tencent, Meituan, Approaching.AI, and LightSeek Foundation, ensuring smooth serving for millions of concurrent users.
+
+Looking ahead, we are excited to collaborate even more closely across the ecosystem and to push the state of LLM serving toward a future that is more scalable, efficient, and production-ready.
 
 For more details, see the official announcement on the PyTorch blog: https://pytorch.org/blog/mooncake-joins-pytorch/
